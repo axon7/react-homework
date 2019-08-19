@@ -5,11 +5,11 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
-import { rootReducer } from "./reducers/rootReducer";
 import thunk from "redux-thunk";
+import marilynReducer from "./reducers/marilynReducer";
 
 const store = createStore(
-  rootReducer,
+  marilynReducer,
   compose(
     applyMiddleware(thunk),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
