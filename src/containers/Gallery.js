@@ -7,6 +7,9 @@ class Gallery extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchPictures());
   }
+  shouldComponentUpdate(nextProps) {
+    return this.props.data !== nextProps.data;
+  }
 
   render() {
     let nineMarilyns = this.props.data.slice(0, 9);
