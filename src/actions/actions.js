@@ -7,7 +7,7 @@ export const FETCH_PICTURES_SUCCESS = "FETCH_PICTURES_SUCCESS";
 export const FETCH_PICTURES_FAILURE = "FETCH_PICTURES_FAILURE";
 
 const URL =
-  "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags=Marilyn%20Monroe&sort=sort=date-posted-desc";
+  "https://cors-anywhere.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags=Marilyn%20Monroe&sort=sort=date-posted-desc";
 
 var config = {
   headers: { "Access-Control-Allow-Origin": "*" }
