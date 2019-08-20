@@ -1,5 +1,4 @@
 import React from "react";
-import { italic } from "ansi-colors";
 
 export default function Profile() {
   return (
