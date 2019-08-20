@@ -49,7 +49,7 @@ export default function Navbar() {
 
         <Link to='/profile'>
           <i
-            class='fas fa-user'
+            className='fas fa-user'
             style={{
               color: "white",
               border: "1px solid white",
@@ -62,7 +62,7 @@ export default function Navbar() {
         </Link>
         <Link to='/gallery'>
           <i
-            class='far fa-image'
+            className='far fa-image'
             style={{
               color: "white",
               border: "1px solid white",
