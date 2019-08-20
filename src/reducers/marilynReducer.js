@@ -1,11 +1,13 @@
 import {
   FETCH_PICTURES_PENDING,
-  FETCH_PICTURES_SUCCESS
+  FETCH_PICTURES_SUCCESS,
+  FETCH_PICTURES_FAILURE
 } from "../actions/actions";
 
 const initialState = {
   data: [],
-  loading: false
+  loading: false,
+  error: ""
 };
 
 const marilynReducer = (state = initialState, action) => {
@@ -20,6 +22,12 @@ const marilynReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload.data
+      };
+    case FETCH_PICTURES_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload.error
       };
     default:
       return state;
