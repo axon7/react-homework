@@ -4,6 +4,7 @@ export const FETCH_PICTURES = "FETCH_PICTURES";
 export const SHOW_PROFILE = "SHOW_PROFILE";
 export const FETCH_PICTURES_PENDING = "FETCH_PICTURES_PENDING";
 export const FETCH_PICTURES_SUCCESS = "FETCH_PICTURES_SUCCESS";
+export const FETCH_PICTURES_FAILURE = "FETCH_PICTURES_FAILURE";
 
 const URL =
   "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags=Marilyn%20Monroe&sort=sort=date-posted-desc";
@@ -20,6 +21,11 @@ export const fetchPicturesSuccess = data => ({
   payload: { data }
 });
 
+export const fetchProductsFailure = error => ({
+  type: FETCH_PICTURES_FAILURE,
+  payload: { error }
+});
+
 export const showProfile = () => ({
   type: SHOW_PROFILE
 });
@@ -27,11 +33,11 @@ export const showProfile = () => ({
 export const fetchPictures = () => {
   return async dispatch => {
     try {
+      await dispatch(fetchPicturesPending());
       const res = await axios.get(URL, config);
       await dispatch(fetchPicturesSuccess(res.data.items));
-      await console.log(res.data.items);
     } catch (error) {
-      console.log("failed");
+      await dispatch(fetchProductsFailure(error));
     }
 
     console.log("success");
