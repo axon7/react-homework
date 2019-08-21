@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const FETCH_PICTURES = "FETCH_PICTURES";
-export const SHOW_PROFILE = "SHOW_PROFILE";
 export const FETCH_PICTURES_PENDING = "FETCH_PICTURES_PENDING";
 export const FETCH_PICTURES_SUCCESS = "FETCH_PICTURES_SUCCESS";
 export const FETCH_PICTURES_FAILURE = "FETCH_PICTURES_FAILURE";
@@ -24,10 +23,6 @@ export const fetchPicturesSuccess = data => ({
 export const fetchProductsFailure = error => ({
   type: FETCH_PICTURES_FAILURE,
   payload: { error }
-});
-
-export const showProfile = () => ({
-  type: SHOW_PROFILE
 });
 
 export const fetchPictures = () => {
