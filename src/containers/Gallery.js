@@ -26,8 +26,8 @@ const FlexImage = styled.img`
 `;
 
 const FlexImageLink = styled.a`
-  max-width: 350px;
-  height: 250px;
+  max-width: 250px;
+  height: 280px;
   width: 100%;
   margin: 15px;
 `;
