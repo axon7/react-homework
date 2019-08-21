@@ -4,6 +4,10 @@
 
 > Marilyn Monroe gallery with profile page
 
+### Live Demo
+
+[Homework-React on Heroku](https://homework-react.herokuapp.com)
+
 ### Used:
 
 - [x] React
