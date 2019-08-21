@@ -22,12 +22,13 @@ const FlexImage = styled.img`
   :hover {
     opacity: 0.6;
     transition: 0.2s;
+    transform: scale(0.98);
   }
 `;
 
 const FlexImageLink = styled.a`
   max-width: 350px;
-  height: 350px;
+  height: 250px;
   width: 100%;
   margin: 15px;
 `;
