@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   width: 80%;
-  margin: 30px;
+  margin: 40px 30px;
 `;
 const StyledH1 = styled.h1`
   letter-spacing: -2px;
