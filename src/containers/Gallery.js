@@ -2,6 +2,35 @@ import React from "react";
 import { fetchPictures } from "../actions/actions";
 import { connect } from "react-redux";
 import Loader from "react-loader-spinner";
+import styled from "styled-components";
+
+const StyledFlexContainer = styled.div`
+  width: 75vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const FlexImage = styled.img`
+  height: 100%;
+  width: 100%;
+  background-color: lightgray;
+  object-fit: cover;
+
+  :hover {
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+`;
+
+const FlexImageLink = styled.a`
+  max-width: 350px;
+  height: 350px;
+  width: 100%;
+  margin: 15px;
+`;
 
 class Gallery extends React.Component {
   componentDidMount() {
@@ -22,15 +51,15 @@ class Gallery extends React.Component {
       return <Loader type='TailSpin' color='blue' height={80} width={80} />;
     }
     return (
-      <div>
+      <StyledFlexContainer>
         {nineMarilyns.map((item, index) => {
           return (
-            <a href={item.link} target='blank' key={index}>
-              <img src={item.media.m} alt='marilyn monroe' />
-            </a>
+            <FlexImageLink href={item.link} target='blank' key={index}>
+              <FlexImage src={item.media.m} alt='marilyn monroe' />
+            </FlexImageLink>
           );
         })}
-      </div>
+      </StyledFlexContainer>
     );
   }
 }
