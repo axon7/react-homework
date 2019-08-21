@@ -1,7 +1,7 @@
 import React from "react";
 import { fetchPictures } from "../actions/actions";
 import { connect } from "react-redux";
-import Loader from "react-loader-spinner";
+import { MetroSpinner } from "react-spinners-kit";
 import styled from "styled-components";
 
 const StyledFlexContainer = styled.div`
@@ -58,7 +58,12 @@ class Gallery extends React.Component {
             alignItems: "center"
           }}
         >
-          <Loader type='TailSpin' color='#79d6bb' height={150} width={150} />
+          {/* <Loader type='TailSpin' color='#79d6bb' height={150} width={150} /> */}
+          <MetroSpinner
+            color='#79d6bb'
+            size={150}
+            loading={this.props.loading}
+          />
         </div>
       );
     }
