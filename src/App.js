@@ -16,8 +16,18 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path='/' render={() => <Redirect to='/gallery' />} />
-          <Route path='/gallery' component={Gallery} />
-          <Route path='/profile' component={Profile} />
+          <Route
+            path='/gallery'
+            exact
+            activeclassName='active'
+            component={Gallery}
+          />
+          <Route
+            path='/profile'
+            exact
+            activeclassName='active'
+            component={Profile}
+          />
         </Switch>
       </Layout>
     </div>
