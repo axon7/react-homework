@@ -8,6 +8,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import marilynReducer from "./reducers/marilynReducer";
 import { BrowserRouter } from "react-router-dom";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 let devTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
