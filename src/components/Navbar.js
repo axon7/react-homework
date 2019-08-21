@@ -30,8 +30,8 @@ const NavBar = styled.nav`
 `;
 
 const Avatar = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   z-index: 2;
   position: absolute;
   top: -40px;
@@ -45,14 +45,14 @@ const StyledNavLink = styled(NavLink)`
     margin-right: 15px;
   }
   &.active {
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 50%;
   }
 `;
 
 const StyledIcon = styled.i`
   color: white;
-  padding: 10px;
+  padding: 9px;
   height: 90%;
 `;
 
@@ -66,7 +66,7 @@ export default function Navbar() {
           <StyledIcon className='fas fa-user' />
         </StyledNavLink>
         <StyledNavLink to='/gallery'>
-          <StyledIcon className='far fa-image' />
+          <StyledIcon className='far fa-image fa-lg' />
         </StyledNavLink>
       </NavBar>
     </StyledHeader>

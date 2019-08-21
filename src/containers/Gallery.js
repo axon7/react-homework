@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const StyledFlexContainer = styled.div`
   width: 75vw;
-  margin: 20px auto;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,6 @@ const StyledFlexContainer = styled.div`
 const FlexImage = styled.img`
   height: 100%;
   width: 100%;
-  background-color: lightgray;
   object-fit: cover;
 
   :hover {
