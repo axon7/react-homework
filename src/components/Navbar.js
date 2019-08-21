@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import sand_rock from "../assets/sand_rock.jpg";
 import marilyn_avatar from "../assets/marilyn_avatar.png";
@@ -19,14 +19,14 @@ const NavBackground = styled.div`
 
 const NavBar = styled.nav`
   width: 100%;
-  height: 20%;
+  height: 52px;
   background-color: #79d6bb;
   border-top: 1px solid white;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 5%;
 `;
 
 const Avatar = styled.img`
@@ -37,7 +37,23 @@ const Avatar = styled.img`
   top: -40px;
   left: 40px;
   border-radius: 100px;
-  border: 4px solid white;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+`;
+
+const StyledNavLink = styled(NavLink)`
+  &:first-of-type {
+    margin-right: 15px;
+  }
+  &.active {
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+`;
+
+const StyledIcon = styled.i`
+  color: white;
+  padding: 10px;
+  height: 90%;
 `;
 
 export default function Navbar() {
@@ -45,33 +61,13 @@ export default function Navbar() {
     <StyledHeader>
       <NavBackground />
       <NavBar>
-        <Avatar src={marilyn_avatar} />
-
-        <Link to='/profile'>
-          <i
-            className='fas fa-user'
-            style={{
-              color: "white",
-              border: "1px solid white",
-              borderRadius: "50%",
-              padding: "10px",
-              marginRight: "10px",
-              height: "90%"
-            }}
-          />
-        </Link>
-        <Link to='/gallery'>
-          <i
-            className='far fa-image'
-            style={{
-              color: "white",
-              border: "1px solid white",
-              borderRadius: "50%",
-              padding: "10px",
-              height: "90%"
-            }}
-          />
-        </Link>
+        <Avatar src={marilyn_avatar} alt='Marilyn Portrait' />
+        <StyledNavLink to='/profile'>
+          <StyledIcon className='fas fa-user' />
+        </StyledNavLink>
+        <StyledNavLink to='/gallery'>
+          <StyledIcon className='far fa-image' />
+        </StyledNavLink>
       </NavBar>
     </StyledHeader>
   );
