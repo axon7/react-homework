@@ -48,7 +48,19 @@ class Gallery extends React.Component {
     }
 
     if (this.props.loading) {
-      return <Loader type='TailSpin' color='blue' height={80} width={80} />;
+      return (
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            height: "50vh",
+            alignItems: "center"
+          }}
+        >
+          <Loader type='TailSpin' color='#79d6bb' height={150} width={150} />
+        </div>
+      );
     }
     return (
       <StyledFlexContainer>
